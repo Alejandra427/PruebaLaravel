@@ -74,16 +74,7 @@ class UserManagementController extends Controller
         End of example */
 
         // Write your code here
-        
-        //? Alternativa 1
-        /*foreach ($data["departments"] as $department) {
-          $users = $department["users"];
-          foreach ($users as $user) {
-            $this->createUser($user["name"], $user["birthdate"], $user["nit"], $user["contact"]["email"]);
-          }
-        }*/
-
-        //? Alternativa 2
+      
         for ($i=0; $i < count($data["departments"]); $i++) { 
           $users = $data["departments"][$i]["users"];
           foreach ($users as $user) {
